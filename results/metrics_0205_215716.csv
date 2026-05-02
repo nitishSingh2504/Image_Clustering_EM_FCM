@@ -1,0 +1,36 @@
+=== Run Parameters ===
+image,A-mature-tree-of-Azadirachta-indica.ppm_-e1660738396252.png
+algorithm,Both
+k,3
+sample_pct,40.0
+gmm_cov_type,full
+gmm_n_init,5
+fuzz_m,2.0
+fcm_init,kmeans++
+saved_at,0205_215716
+
+=== Cluster Names ===
+C1,Cluster 1
+C2,Cluster 2
+C3,Cluster 3
+
+=== Quality Metrics ===
+Metric,EM,FCM
+Silhouette Score,0.5882374048233032,0.6320540904998779
+Davies-Bouldin Index,0.5245410401851583,0.4932825011366922
+Calinski-Harabász Index,35175.36473674875,47100.92661592258
+BIC,-125607.08938398461,
+AIC,-125924.34436035156,
+Partition Coefficient,,0.8280093669891357
+Partition Entropy,,0.3232364058494568
+Time_s,5.018,0.263
+Iterations,8,17
+
+=== Per-Cluster Spectral Statistics ===
+Algorithm,Cluster,Band1_mean,Band2_mean,Band3_mean,Band4_mean,Pixel_count
+EM,C1,0.531986,0.608368,0.353576,0.000000,60317
+EM,C2,0.138066,0.195210,0.096248,0.000000,78699
+EM,C3,0.829400,0.895324,0.975886,0.000000,36221
+FCM,C1,0.507744,0.592381,0.319436,0.000000,55496
+FCM,C2,0.136325,0.191297,0.094940,0.000000,78371
+FCM,C3,0.825119,0.885177,0.944697,0.000000,41370

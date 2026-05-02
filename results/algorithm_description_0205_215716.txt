@@ -1,0 +1,30 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║  SATELLITE IMAGE CLUSTERING — ALGORITHM DESCRIPTION  GNR605             ║
+║  Generated: 0205_215716
+╚══════════════════════════════════════════════════════════════════════════╝
+
+━━━ 1. EM / GMM ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Covariance type : full
+n_init          : 5
+max_iter        : 300  (fixed)
+reg_covar       : 1e-06  (fixed)
+
+E-Step : r(i,k) = πₖ·N(xᵢ|μₖ,Σₖ) / Σⱼ πⱼ·N(xᵢ|μⱼ,Σⱼ)
+M-Step : update μₖ, Σₖ, πₖ via weighted statistics
+Model selection: BIC / AIC (↓ better)
+
+━━━ 2. Fuzzy C-Means ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Fuzziness m     : 2.0
+Init method     : kmeans++
+max_iter        : 150  (fixed)
+tolerance       : 0.0001  (fixed)
+
+Centre update : vₖ = Σᵢ (uᵢₖ)ᵐ xᵢ / Σᵢ (uᵢₖ)ᵐ
+Membership    : uᵢₖ = 1 / Σⱼ (dᵢₖ/dᵢⱼ)^(2/(m−1))
+Quality       : Partition Coefficient (↑), Partition Entropy (↓)
+
+━━━ 3. Run Parameters ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Image       : A-mature-tree-of-Azadirachta-indica.ppm_-e1660738396252.png
+Algorithm   : Both
+k           : 3
+Sample (%)  : 40.0
